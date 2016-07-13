@@ -21,7 +21,6 @@ $A1 += $VM.Name
 ForEach ($VM in Compare-Object $A1 $A2 | Where-Object { $_.SideIndicator -eq "<=" } ) 
 {
 $OutputMail = $OutputMail + $VM.InputObject + "`n"
-#echo $VM.InputObject
 $VM.InputObject >> "C:\PowerCLI\VDItoolsStatusControl.txt"
 }
 
